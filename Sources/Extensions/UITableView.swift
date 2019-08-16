@@ -1,27 +1,21 @@
 extension UITableView {
-    public func register<T: UITableViewCell>(_ classType: T.Type) {
-        register(classType, forCellReuseIdentifier: String(describing: T.self))
+    func dequeueReusableCell<T: UITableViewCell>(withClass name: T.Type) -> T {
+        return dequeueReusableCell(withIdentifier: String(describing: name)) as! T
     }
 
-    public func register<T: UITableViewHeaderFooterView>(_ classType: T.Type) {
-        register(classType, forCellReuseIdentifier: String(describing: T.self))
+    func dequeueReusableCell<T: UITableViewCell>(withClass name: T.Type, for indexPath: IndexPath) -> T {
+        return dequeueReusableCell(withIdentifier: String(describing: name), for: indexPath) as! T
     }
 
-    public func registerNib<T: UITableViewCell>(_ classType: T.Type) {
-        let className = String(describing: T.self)
-        register(UINib(nibName: className, bundle: nil), forCellReuseIdentifier: className)
+    func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(withClass name: T.Type) -> T {
+        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: name)) as! T
     }
 
-    public func registerNib<T: UITableViewHeaderFooterView>(_ classType: T.Type) {
-        let className = String(describing: T.self)
-        register(UINib(nibName: className, bundle: nil), forHeaderFooterViewReuseIdentifier: className)
+    func register<T: UITableViewHeaderFooterView>(headerFooterViewClassWith name: T.Type) {
+        register(T.self, forHeaderFooterViewReuseIdentifier: String(describing: name))
     }
 
-    public func dequeue<T: UITableViewCell>(_ classType: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as! T
-    }
-
-    public func dequeue<T: UITableViewHeaderFooterView>(_ classType: T.Type) -> T {
-        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: T.self)) as! T
+    func register<T: UITableViewCell>(cellWithClass name: T.Type) {
+        register(T.self, forCellReuseIdentifier: String(describing: name))
     }
 }
