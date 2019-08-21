@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2BBC9049DDDB4214D62424 /* Pods_NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */; };
 		900F6B74230CE48F0018D22C /* NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900F6B6A230CE48F0018D22C /* NimbleExtension.framework */; };
 		900F6B7B230CE48F0018D22C /* NimbleExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 900F6B6D230CE48F0018D22C /* NimbleExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */; };
@@ -15,6 +16,7 @@
 		900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B90230CE60B0018D22C /* FullyRoundedButton.swift */; };
 		900F6B95230CE6960018D22C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B94230CE6960018D22C /* .gitkeep */; };
 		900F6B97230CE6AA0018D22C /* NimbleExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B96230CE6A90018D22C /* NimbleExtension.podspec */; };
+		9D88926164156FD8AEEC4081 /* Pods_NimbleExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0132CA7E973D873142CB5903 /* Pods-NimbleExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.release.xcconfig"; sourceTree = "<group>"; };
+		30F97E2328DE5DE9B1A2D65C /* Pods-NimbleExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
+		64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtensionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900F6B6A230CE48F0018D22C /* NimbleExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimbleExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900F6B6D230CE48F0018D22C /* NimbleExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimbleExtension.h; sourceTree = "<group>"; };
 		900F6B6E230CE48F0018D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +44,9 @@
 		900F6B90230CE60B0018D22C /* FullyRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullyRoundedButton.swift; sourceTree = "<group>"; };
 		900F6B94230CE6960018D22C /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		900F6B96230CE6A90018D22C /* NimbleExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NimbleExtension.podspec; sourceTree = "<group>"; };
+		ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47CCAA68AED19C601B6A91A /* Pods-NimbleExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		FD7DF5E140F8D33491D6EAD6 /* Pods-NimbleExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2BBC9049DDDB4214D62424 /* Pods_NimbleExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				900F6B74230CE48F0018D22C /* NimbleExtension.framework in Frameworks */,
+				9D88926164156FD8AEEC4081 /* Pods_NimbleExtensionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +77,8 @@
 				900F6B77230CE48F0018D22C /* NimbleExtensionTests */,
 				900F6B6B230CE48F0018D22C /* Products */,
 				900F6B96230CE6A90018D22C /* NimbleExtension.podspec */,
+				BDDFBCA3758B732C3B82DED2 /* Pods */,
+				C9A73AFBC09BA4C130AB4983 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +177,26 @@
 			path = SourcesTests;
 			sourceTree = "<group>";
 		};
+		BDDFBCA3758B732C3B82DED2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F47CCAA68AED19C601B6A91A /* Pods-NimbleExtension.debug.xcconfig */,
+				0132CA7E973D873142CB5903 /* Pods-NimbleExtension.release.xcconfig */,
+				FD7DF5E140F8D33491D6EAD6 /* Pods-NimbleExtensionTests.debug.xcconfig */,
+				30F97E2328DE5DE9B1A2D65C /* Pods-NimbleExtensionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9A73AFBC09BA4C130AB4983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */,
+				64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -183,7 +215,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 900F6B7E230CE48F0018D22C /* Build configuration list for PBXNativeTarget "NimbleExtension" */;
 			buildPhases = (
+				529FB60C471B236E799A7C39 /* [CP] Check Pods Manifest.lock */,
 				900F6B65230CE48F0018D22C /* Headers */,
+				9000E8B5230D9770007E271F /* SwiftLint */,
 				900F6B66230CE48F0018D22C /* Sources */,
 				900F6B67230CE48F0018D22C /* Frameworks */,
 				900F6B68230CE48F0018D22C /* Resources */,
@@ -201,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 900F6B81230CE48F0018D22C /* Build configuration list for PBXNativeTarget "NimbleExtensionTests" */;
 			buildPhases = (
+				EEF6A438905A03001CDDC902 /* [CP] Check Pods Manifest.lock */,
 				900F6B6F230CE48F0018D22C /* Sources */,
 				900F6B70230CE48F0018D22C /* Frameworks */,
 				900F6B71230CE48F0018D22C /* Resources */,
@@ -270,6 +305,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		529FB60C471B236E799A7C39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NimbleExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9000E8B5230D9770007E271F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		EEF6A438905A03001CDDC902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NimbleExtensionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		900F6B66230CE48F0018D22C /* Sources */ = {
@@ -425,6 +525,7 @@
 		};
 		900F6B7F230CE48F0018D22C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F47CCAA68AED19C601B6A91A /* Pods-NimbleExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -451,6 +552,7 @@
 		};
 		900F6B80230CE48F0018D22C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0132CA7E973D873142CB5903 /* Pods-NimbleExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -476,6 +578,7 @@
 		};
 		900F6B82230CE48F0018D22C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7DF5E140F8D33491D6EAD6 /* Pods-NimbleExtensionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +597,7 @@
 		};
 		900F6B83230CE48F0018D22C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30F97E2328DE5DE9B1A2D65C /* Pods-NimbleExtensionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
