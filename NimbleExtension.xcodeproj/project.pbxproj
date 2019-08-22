@@ -73,10 +73,10 @@
 		900F6B60230CE48F0018D22C = {
 			isa = PBXGroup;
 			children = (
+				900F6B96230CE6A90018D22C /* NimbleExtension.podspec */,
 				900F6B6C230CE48F0018D22C /* NimbleExtension */,
 				900F6B77230CE48F0018D22C /* NimbleExtensionTests */,
 				900F6B6B230CE48F0018D22C /* Products */,
-				900F6B96230CE6A90018D22C /* NimbleExtension.podspec */,
 				BDDFBCA3758B732C3B82DED2 /* Pods */,
 				C9A73AFBC09BA4C130AB4983 /* Frameworks */,
 			);
