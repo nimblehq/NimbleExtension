@@ -1,6 +1,4 @@
-//
 //  JSONAPIErrorSource.swift
-//  Braive
 //
 //  Created by Issarapong Poesua on 18/9/18.
 //  Copyright © 2018 Nimbl3. All rights reserved.
