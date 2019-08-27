@@ -152,8 +152,7 @@
 		900F6B88230CE5230018D22C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */,
-				900F6B8B230CE54E0018D22C /* UITableView+DequeueReusable.swift */,
+				9EFADFB0231539230020E3F8 /* UITableView */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -161,7 +160,7 @@
 		900F6B8D230CE5D60018D22C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				900F6B8E230CE5E20018D22C /* Bundle+Version.swift */,
+				9EFADFAF231538E60020E3F8 /* Bundle */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -189,6 +188,23 @@
 				9E093CB323139453005B2460 /* CompletionHandler.swift */,
 			);
 			path = TypeAlias;
+			sourceTree = "<group>";
+		};
+		9EFADFAF231538E60020E3F8 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				900F6B8E230CE5E20018D22C /* Bundle+Version.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		9EFADFB0231539230020E3F8 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */,
+				900F6B8B230CE54E0018D22C /* UITableView+DequeueReusable.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		BDDFBCA3758B732C3B82DED2 /* Pods */ = {
