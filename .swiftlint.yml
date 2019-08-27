@@ -60,13 +60,11 @@ opt_in_rules:
   - static_operator
   - strong_iboutlet
   - toggle_bool
-  - type_contents_order
   - unavailable_function
   - unneeded_parentheses_in_closure_argument
   - unowned_variable_capture
   - untyped_error_in_catch
   - vertical_parameter_alignment_on_call
-  - vertical_whitespace_between_cases
   - xct_specific_matcher
   - yoda_condition
 disabled_rules:

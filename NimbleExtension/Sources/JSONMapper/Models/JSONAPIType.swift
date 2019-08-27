@@ -9,8 +9,7 @@
 typealias JSONAPICodable = JSONAPIType & Codable
 
 protocol JSONAPIType {
-    
+
     var id: String { get }
     var type: String { get }
-    
 }

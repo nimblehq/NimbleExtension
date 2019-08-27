@@ -8,27 +8,21 @@
 
 import Foundation
 
+protocol ResourceIdentifiable {
+    var id: String { get }
+    var type: String { get }
+}
+
 struct ResourceIdentifier: JSONAPICodable, Hashable {
-    
     let id: String
     let type: String
-    
 }
 
 //todo:- continue working on this one after relationships field is required
 //       to be as a parameter of JSON:API request.
 
-protocol ResourceIdentifiable {
-    
-    var id: String { get }
-    var type: String { get }
-    
-}
-
 extension ResourceIdentifiable {
-    
     var resourceIdentifier: ResourceIdentifier {
         return ResourceIdentifier(id: id, type: type)
     }
-    
 }

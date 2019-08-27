@@ -8,14 +8,14 @@
 
 import Foundation
 
-class JSONAPIDecoder: JSONDecoder {
-    
-    override func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
+public class JSONAPIDecoder: JSONDecoder {
+
+    public override func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
         let jsonAPIObject = try super.decode(JSONAPIObject.self, from: data)
-        
+
         let includedData = jsonAPIObject.included ?? []
         let dictionary = includedDictionary(from: includedData)
-        
+
         switch jsonAPIObject.type {
         case .data(let data):       return try decode(data, including: dictionary, into: type)
         case .meta(let meta):       return try decode(meta, into: type)
@@ -24,7 +24,6 @@ class JSONAPIDecoder: JSONDecoder {
     }
     
     // MARK: - private helpers
-    
     private typealias ResourceDictionary = [ResourceIdentifier: Resource]
     
     private func decode<T: Decodable>(_ meta: JSON, into type: T.Type) throws -> T {
@@ -38,11 +37,12 @@ class JSONAPIDecoder: JSONDecoder {
         switch dataType {
         case .single(let resource):
             return try decode(resource, including: includedDictionary, into: type)
+            
         case .collection(let resources):
             return try decodeCollection(of: resources, including: includedDictionary, into: type)
         }
     }
-    
+
     private func decode<T: Decodable>(_ resource: Resource,
                                       including includedDictionary: ResourceDictionary,
                                       into type: T.Type) throws -> T {
@@ -50,7 +50,7 @@ class JSONAPIDecoder: JSONDecoder {
         let data = try JSONEncoder().encode(dictionary)
         return try super.decode(type, from: data)
     }
-    
+
     private func decodeCollection<T: Decodable>(of resources: [Resource],
                                                 including includedDictionary: ResourceDictionary,
                                                 into type: T.Type) throws -> T {
@@ -58,7 +58,7 @@ class JSONAPIDecoder: JSONDecoder {
         let data = try JSONEncoder().encode(collection)
         return try super.decode(type, from: data)
     }
-    
+
     private func includedDictionary(from includedData: [Resource]) -> ResourceDictionary {
         return includedData.reduce(into: [:]) { dictionary, resource in
             let identifier = ResourceIdentifier(id: resource.id, type: resource.type)
@@ -66,17 +66,19 @@ class JSONAPIDecoder: JSONDecoder {
         }
     }
     
-    private func resolvedAttributes(of resource: Resource, including includedDictionary: ResourceDictionary) throws -> JSON? {
+    private func resolvedAttributes(of resource: Resource,
+                                    including includedDictionary: ResourceDictionary) throws -> JSON? {
         guard var attributes = resource.attributes?.nested else { return nil } //todo:- should throw instead?
         attributes[Resource.CodingKeys.id.rawValue] = .string(resource.id)
         attributes[Resource.CodingKeys.type.rawValue] = .string(resource.type)
-        
+
         try resource.relationships?.forEach { key, relationship in
             guard let type = relationship.data else { return }
             switch type {
             case .single(let identifier):
                 let includedResource = try getResource(from: includedDictionary, for: identifier)
                 attributes[key] = try resolvedAttributes(of: includedResource, including: includedDictionary)
+                
             case .collection(let identifiers):
                 let includedAttributes = try identifiers
                     .map { try getResource(from: includedDictionary, for: $0) }
@@ -86,7 +88,7 @@ class JSONAPIDecoder: JSONDecoder {
         }
         return .nested(attributes)
     }
-    
+
     private func getResource(from includedDictionary: ResourceDictionary,
                              for identifier: ResourceIdentifier) throws -> Resource {
         guard let resource = includedDictionary[identifier] else {
@@ -94,5 +96,4 @@ class JSONAPIDecoder: JSONDecoder {
         }
         return resource
     }
-    
 }

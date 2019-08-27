@@ -9,15 +9,14 @@
 import Foundation
 
 struct Links: Codable {
-    
+
     let selfURL: Link?
     let relatedURL: Link?
     let articleURL: Link?
-    
+
     enum CodingKeys: String, CodingKey {
         case selfURL = "self"
         case relatedURL = "related"
         case articleURL = "article"
     }
-    
 }

@@ -5,9 +5,10 @@
 //  Created by Pirush Prechathavanich on 4/4/18.
 //  Copyright © 2018 Nimbl3. All rights reserved.
 //
+// swiftlint:disable multiline_function_chains
 
 enum JSON: Codable {
-    
+
     case string(String)
     case int(Int)
     case double(Double)
@@ -15,7 +16,7 @@ enum JSON: Codable {
     case nested([String: JSON])
     case array([JSON])
     case `nil`
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         self = try container.decodeIfPresent(String.self).map(JSON.string)
@@ -27,7 +28,7 @@ enum JSON: Codable {
             .or(container.decodeNil() ? .nil : nil)
             .resolve(with: JSON.typeMismatchError(for: container.codingPath))
     }
-    
+
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
@@ -40,7 +41,7 @@ enum JSON: Codable {
         case .nil:                  try container.encodeNil()
         }
     }
-    
+
     subscript(key: String) -> JSON? {
         get { return nested?[key] }
         set {
@@ -50,51 +51,47 @@ enum JSON: Codable {
             }
         }
     }
-    
+
     var string: String? {
         guard case .string(let value) = self else { return nil }
         return value
     }
-    
+
     var int: Int? {
         guard case .int(let value) = self else { return nil }
         return value
     }
-    
+
     // swiftlint:disable:next discouraged_optional_boolean
     var bool: Bool? {
         guard case .bool(let value) = self else { return nil }
         return value
     }
-    
+
     var double: Double? {
         guard case .double(let value) = self else { return nil }
         return value
     }
-    
+
     var nested: [String: JSON]? {
         guard case .nested(let value) = self else { return nil }
         return value
     }
-    
+
     var array: [JSON]? {
         guard case .array(let value) = self else { return nil }
         return value
     }
-    
+
     // MARK: - private helpers
-    
     private static func typeMismatchError(for codingPath: [CodingKey]) -> DecodingError {
         let context = DecodingError.Context(codingPath: codingPath, debugDescription: "Unsupported JSON value")
         return DecodingError.typeMismatch(JSON.self, context)
     }
-    
 }
 
 private extension SingleValueDecodingContainer {
-    
     func decodeIfPresent<T: Decodable>(_ type: T.Type) -> T? {
         return try? decode(type)
     }
-    
 }

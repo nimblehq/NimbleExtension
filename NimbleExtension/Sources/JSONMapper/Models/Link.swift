@@ -9,15 +9,15 @@
 import Foundation
 
 struct Link: Codable {
-    
+
     let url: URL
     let meta: JSON?
-    
+
     enum CodingKeys: String, CodingKey {
         case url = "href"
         case meta
     }
-    
+
     init(from decoder: Decoder) throws {
         if let container = try? decoder.singleValueContainer() {
             url = try container.decode(URL.self)
@@ -28,5 +28,4 @@ struct Link: Codable {
             meta = try container.decodeIfPresent(JSON.self, forKey: .meta)
         }
     }
-    
 }

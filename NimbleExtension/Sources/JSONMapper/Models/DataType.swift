@@ -9,10 +9,10 @@
 import Foundation
 
 enum DataType<T: Codable>: Codable {
-    
+
     case single(T)
     case collection([T])
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         do {
@@ -21,7 +21,7 @@ enum DataType<T: Codable>: Codable {
             self = try .collection(container.decode([T].self))
         }
     }
-    
+
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
@@ -29,5 +29,4 @@ enum DataType<T: Codable>: Codable {
         case .collection(let array):    try container.encode(array)
         }
     }
-    
 }

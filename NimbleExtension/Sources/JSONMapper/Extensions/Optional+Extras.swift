@@ -6,8 +6,8 @@
 //  Copyright © 2019 The 1. All rights reserved.
 //
 
-extension Optional {
-    
+public extension Optional {
+
     func or(_ otherOptional: @autoclosure () throws -> Wrapped?) rethrows -> Wrapped? {
         switch self {
         case .some(let value):
@@ -25,18 +25,17 @@ extension Optional {
             return try otherWrapped()
         }
     }
-    
+
     func resolve(with error: @autoclosure () -> Error) throws -> Wrapped {
         switch self {
         case .none:                 throw error()
         case .some(let wrapped):    return wrapped
         }
     }
-    
+
     var isNil: Bool {
         return self == nil
     }
-    
+
     var hasValue: Bool { return !isNil }
-    
 }

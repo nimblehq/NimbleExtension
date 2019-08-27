@@ -25,16 +25,16 @@
 
 import UIKit
 
-extension UITableView {
-    public func dequeue<T: UITableViewCell>(_ classType: T.Type) -> T? {
+public extension UITableView {
+    func dequeue<T: UITableViewCell>(_ classType: T.Type) -> T? {
         return dequeueReusableCell(withIdentifier: String(describing: T.self)) as? T
     }
 
-    public func dequeue<T: UITableViewCell>(_ classType: T.Type, for indexPath: IndexPath) -> T? {
+    func dequeue<T: UITableViewCell>(_ classType: T.Type, for indexPath: IndexPath) -> T? {
         return dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T
     }
 
-    public func dequeue<T: UITableViewHeaderFooterView>(_ classType: T.Type) -> T? {
+    func dequeue<T: UITableViewHeaderFooterView>(_ classType: T.Type) -> T? {
         return dequeueReusableHeaderFooterView(withIdentifier: String(describing: T.self)) as? T
     }
 }

@@ -25,12 +25,12 @@
 
 import UIKit
 
-extension UITableView {
-    public func register<T: UITableViewCell>(_ classType: T.Type) {
+public extension UITableView {
+    func register<T: UITableViewCell>(_ classType: T.Type) {
         register(classType, forCellReuseIdentifier: String(describing: T.self))
     }
 
-    public func register<T: UITableViewHeaderFooterView>(_ classType: T.Type) {
+    func register<T: UITableViewHeaderFooterView>(_ classType: T.Type) {
         register(classType, forCellReuseIdentifier: String(describing: T.self))
     }
 }
