@@ -168,8 +168,8 @@
 		900F6B8D230CE5D60018D22C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				9EFADFBE23153B9B0020E3F8 /* Collection */,
 				9EFADFAF231538E60020E3F8 /* Bundle */,
+				9EFADFBE23153B9B0020E3F8 /* Collection */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
