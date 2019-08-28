@@ -7,6 +7,9 @@
 import Foundation
 
 public class JSONAPIDecoder: JSONDecoder {
+    
+    // MARK: - private helpers
+    private typealias ResourceDictionary = [ResourceIdentifier: Resource]
 
     public override func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
         let jsonAPIObject = try super.decode(JSONAPIObject.self, from: data)
@@ -23,9 +26,6 @@ public class JSONAPIDecoder: JSONDecoder {
             throw errors
         }
     }
-    
-    // MARK: - private helpers
-    private typealias ResourceDictionary = [ResourceIdentifier: Resource]
     
     private func decode<T: Decodable>(_ meta: JSON, into type: T.Type) throws -> T {
         let data = try JSONEncoder().encode(meta)
@@ -69,7 +69,9 @@ public class JSONAPIDecoder: JSONDecoder {
     
     private func resolvedAttributes(of resource: Resource,
                                     including includedDictionary: ResourceDictionary) throws -> JSON? {
-        guard var attributes = resource.attributes?.nested else { throw Errors.JSONAPIDecodingError.unableToDecode(reason: "Empty optional") }
+        guard var attributes = resource.attributes?.nested else {
+            throw Errors.JSONAPIDecodingError.unableToDecode(reason: "Empty optional")
+        }
         attributes[Resource.CodingKeys.id.rawValue] = .string(resource.id)
         attributes[Resource.CodingKeys.type.rawValue] = .string(resource.type)
 

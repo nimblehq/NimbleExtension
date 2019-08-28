@@ -5,6 +5,12 @@
 //
 
 public extension Optional {
+    
+    var isNil: Bool {
+        return self == nil
+    }
+    
+    var hasValue: Bool { return !isNil }
 
     func or(_ otherOptional: @autoclosure () throws -> Wrapped?) rethrows -> Wrapped? {
         switch self {
@@ -32,10 +38,4 @@ public extension Optional {
             return wrapped
         }
     }
-
-    var isNil: Bool {
-        return self == nil
-    }
-
-    var hasValue: Bool { return !isNil }
 }

@@ -18,7 +18,7 @@
 		49BAA0232315313500C7D156 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0152315313400C7D156 /* Resource.swift */; };
 		49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0162315313400C7D156 /* ResourceIdentifier.swift */; };
 		49BAA0252315313500C7D156 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0172315313400C7D156 /* Relationship.swift */; };
-		49BAA0262315313500C7D156 /* JSONAPIDecoding+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0182315313400C7D156 /* JSONAPIDecoding+LocalizedError.swift */; };
+		49BAA0262315313500C7D156 /* JSONAPIDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0182315313400C7D156 /* JSONAPIDecodingError.swift */; };
 		49BAA0272315313500C7D156 /* Optional+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA01A2315313400C7D156 /* Optional+Extras.swift */; };
 		49BAA0282315313500C7D156 /* JSONAPIDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA01B2315313400C7D156 /* JSONAPIDecoder.swift */; };
 		900F6B74230CE48F0018D22C /* NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900F6B6A230CE48F0018D22C /* NimbleExtension.framework */; };
@@ -57,7 +57,7 @@
 		49BAA0152315313400C7D156 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		49BAA0162315313400C7D156 /* ResourceIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceIdentifier.swift; sourceTree = "<group>"; };
 		49BAA0172315313400C7D156 /* Relationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
-		49BAA0182315313400C7D156 /* JSONAPIDecoding+LocalizedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONAPIDecoding+LocalizedError.swift"; sourceTree = "<group>"; };
+		49BAA0182315313400C7D156 /* JSONAPIDecodingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIDecodingError.swift; sourceTree = "<group>"; };
 		49BAA01A2315313400C7D156 /* Optional+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extras.swift"; sourceTree = "<group>"; };
 		49BAA01B2315313400C7D156 /* JSONAPIDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIDecoder.swift; sourceTree = "<group>"; };
 		64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtensionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +123,7 @@
 				49BAA0152315313400C7D156 /* Resource.swift */,
 				49BAA0162315313400C7D156 /* ResourceIdentifier.swift */,
 				49BAA0172315313400C7D156 /* Relationship.swift */,
-				49BAA0182315313400C7D156 /* JSONAPIDecoding+LocalizedError.swift */,
+				49BAA0182315313400C7D156 /* JSONAPIDecodingError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -462,7 +462,7 @@
 				49BAA01F2315313500C7D156 /* JSONAPIObject.swift in Sources */,
 				49BAA01D2315313500C7D156 /* Links.swift in Sources */,
 				900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */,
-				49BAA0262315313500C7D156 /* JSONAPIDecoding+LocalizedError.swift in Sources */,
+				49BAA0262315313500C7D156 /* JSONAPIDecodingError.swift in Sources */,
 				49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */,
 				900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */,
 				900F6B8F230CE5E20018D22C /* Bundle+Version.swift in Sources */,

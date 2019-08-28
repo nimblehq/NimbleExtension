@@ -7,6 +7,10 @@
 import Foundation
 
 struct Resource: JSONAPICodable {
+    
+    enum CodingKeys: String, CodingKey {
+        case id, type, attributes, relationships, links, meta
+    }
 
     let id: String
     let type: String
@@ -15,10 +19,6 @@ struct Resource: JSONAPICodable {
     let relationships: [String: Relationship]?
     let links: Links?
     let meta: JSON?
-
-    enum CodingKeys: String, CodingKey {
-        case id, type, attributes, relationships, links, meta
-    }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

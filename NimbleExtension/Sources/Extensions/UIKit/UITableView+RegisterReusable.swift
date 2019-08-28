@@ -31,6 +31,6 @@ public extension UITableView {
     }
 
     func register<T: UITableViewHeaderFooterView>(_ classType: T.Type) {
-        register(classType, forCellReuseIdentifier: String(describing: T.self))
+        register(classType, forHeaderFooterViewReuseIdentifier: String(describing: T.self))
     }
 }

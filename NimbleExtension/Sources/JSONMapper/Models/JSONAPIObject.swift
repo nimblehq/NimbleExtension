@@ -16,6 +16,10 @@ enum JSONAPIResponseType {
 struct JSONAPIObject: Decodable {
     //todo:- data, errors, meta - (either data or errors)
     //       jsonapi, links, included (optional)
+    enum CodingKeys: String, CodingKey {
+        case data, links, included, errors, meta
+    }
+    
     let type: JSONAPIResponseType
 
     let links: Links?
@@ -30,10 +34,6 @@ struct JSONAPIObject: Decodable {
     var errors: [JSONAPIError]? {
         if case .errors(let errors) = type { return errors }
         return nil
-    }
-
-    enum CodingKeys: String, CodingKey {
-        case data, links, included, errors, meta
     }
 
     init(from decoder: Decoder) throws {
@@ -57,7 +57,8 @@ struct JSONAPIObject: Decodable {
         } else if let meta = meta {
             type = .meta(meta)
         } else {
-            throw Errors.JSONAPIDecodingError.invalidFormat(reason: "Either one of data, errors, or meta should have value")
+            throw Errors.JSONAPIDecodingError.invalidFormat(
+                reason: "Either one of data, errors, or meta should have value")
         }
 
         links = try container.decodeIfPresent(Links.self, forKey: .links)

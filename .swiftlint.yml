@@ -60,6 +60,7 @@ opt_in_rules:
   - static_operator
   - strong_iboutlet
   - toggle_bool
+  - type_contents_order
   - unavailable_function
   - unneeded_parentheses_in_closure_argument
   - unowned_variable_capture

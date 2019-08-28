@@ -7,14 +7,14 @@
 import Foundation
 
 struct Link: Codable {
-
-    let url: URL
-    let meta: JSON?
-
+    
     enum CodingKeys: String, CodingKey {
         case url = "href"
         case meta
     }
+
+    let url: URL
+    let meta: JSON?
 
     init(from decoder: Decoder) throws {
         if let container = try? decoder.singleValueContainer() {

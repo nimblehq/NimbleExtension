@@ -8,6 +8,10 @@ import Foundation
 
 struct JSONAPIError: Error, Decodable, Equatable {
 
+    struct Source: Decodable, Equatable {
+        let parameter: String?
+    }
+    
     let id: String?
     let title: String?
     let detail: String?
@@ -16,10 +20,6 @@ struct JSONAPIError: Error, Decodable, Equatable {
     let status: String?
     /// application-specific error code
     let code: String?
-    
-    struct Source: Decodable, Equatable {
-        let parameter: String?
-    }
 }
 
 //note:- JSON:API error object is sent as an array of errors.

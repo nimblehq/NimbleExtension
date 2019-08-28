@@ -9,13 +9,13 @@ import Foundation
 
 struct Relationship: Codable {
     
-    let links: Links?
-    let data: DataType<ResourceIdentifier>?
-    let meta: JSON?
-
     enum CodingKeys: String, CodingKey {
         case links, data, meta
     }
+    
+    let links: Links?
+    let data: DataType<ResourceIdentifier>?
+    let meta: JSON?
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
