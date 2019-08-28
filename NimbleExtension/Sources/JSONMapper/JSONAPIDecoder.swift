@@ -1,7 +1,7 @@
 //  JSONAPIDecoder.swift
 //
 //  Created by Pirush Prechathavanich on 4/4/18.
-//  Copyright © 2018 Nimbl3. All rights reserved.
+//  Copyright © 2018 Nimble. All rights reserved.
 //
 
 import Foundation
@@ -15,9 +15,12 @@ public class JSONAPIDecoder: JSONDecoder {
         let dictionary = includedDictionary(from: includedData)
 
         switch jsonAPIObject.type {
-        case .data(let data):       return try decode(data, including: dictionary, into: type)
-        case .meta(let meta):       return try decode(meta, into: type)
-        case .errors(let errors):   throw errors
+        case .data(let data):
+            return try decode(data, including: dictionary, into: type)
+        case .meta(let meta):
+            return try decode(meta, into: type)
+        case .errors(let errors):
+            throw errors
         }
     }
     
@@ -66,7 +69,7 @@ public class JSONAPIDecoder: JSONDecoder {
     
     private func resolvedAttributes(of resource: Resource,
                                     including includedDictionary: ResourceDictionary) throws -> JSON? {
-        guard var attributes = resource.attributes?.nested else { return nil } //todo:- should throw instead?
+        guard var attributes = resource.attributes?.nested else { throw Errors.JSONAPIDecodingError.unableToDecode(reason: "Empty optional") }
         attributes[Resource.CodingKeys.id.rawValue] = .string(resource.id)
         attributes[Resource.CodingKeys.type.rawValue] = .string(resource.type)
 
@@ -90,7 +93,7 @@ public class JSONAPIDecoder: JSONDecoder {
     private func getResource(from includedDictionary: ResourceDictionary,
                              for identifier: ResourceIdentifier) throws -> Resource {
         guard let resource = includedDictionary[identifier] else {
-            throw Errors.JSONAPIDecoding.resourceNotFound(identifier: identifier)
+            throw Errors.JSONAPIDecodingError.resourceNotFound(identifier: identifier)
         }
         return resource
     }

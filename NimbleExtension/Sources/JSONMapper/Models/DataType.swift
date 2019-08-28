@@ -1,7 +1,7 @@
 //  DataType.swift
 //
 //  Created by Edgars Simanovskis on 27/08/2019.
-//  Copyright © 2019 The 1. All rights reserved.
+//  Copyright © 2018 Nimble. All rights reserved.
 //
 
 import Foundation
@@ -23,8 +23,10 @@ enum DataType<T: Codable>: Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
-        case .single(let object):       try container.encode(object)
-        case .collection(let array):    try container.encode(array)
+        case .single(let object):
+            try container.encode(object)
+        case .collection(let array):
+            try container.encode(array)
         }
     }
 }

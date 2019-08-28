@@ -1,7 +1,7 @@
 //  JSONAPIObject.swift
 //
 //  Created by Pirush Prechathavanich on 4/4/18.
-//  Copyright © 2018 Nimbl3. All rights reserved.
+//  Copyright © 2018 Nimble. All rights reserved.
 //
 
 import Foundation
@@ -43,7 +43,7 @@ struct JSONAPIObject: Decodable {
         let errors = try container.decodeIfPresent([JSONAPIError].self, forKey: .errors)
 
         if data.hasValue && errors.hasValue {
-            throw Errors.JSONAPIDecoding.invalidFormat(
+            throw Errors.JSONAPIDecodingError.invalidFormat(
                 reason: "Data and errors shouldn't co-exist in the same JSON:API object"
             )
         }
@@ -57,7 +57,7 @@ struct JSONAPIObject: Decodable {
         } else if let meta = meta {
             type = .meta(meta)
         } else {
-            throw Errors.JSONAPIDecoding.invalidFormat(reason: "Either one of data, errors, or meta should have value")
+            throw Errors.JSONAPIDecodingError.invalidFormat(reason: "Either one of data, errors, or meta should have value")
         }
 
         links = try container.decodeIfPresent(Links.self, forKey: .links)
