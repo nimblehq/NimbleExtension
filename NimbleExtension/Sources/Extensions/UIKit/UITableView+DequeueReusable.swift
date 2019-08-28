@@ -26,15 +26,24 @@
 import UIKit
 
 public extension UITableView {
-    func dequeue<T: UITableViewCell>(_ classType: T.Type) -> T? {
-        return dequeueReusableCell(withIdentifier: String(describing: T.self)) as? T
+    func dequeue<T: UITableViewCell>(_ classType: T.Type) -> T {
+        guard let cell = dequeueReusableCell(withIdentifier: String(describing: T.self)) as? T else {
+            fatalError("\(T.self) is not registered")
+        }
+        return cell
     }
 
-    func dequeue<T: UITableViewCell>(_ classType: T.Type, for indexPath: IndexPath) -> T? {
-        return dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T
+    func dequeue<T: UITableViewCell>(_ classType: T.Type, for indexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T else {
+            fatalError("\(T.self) is not registered")
+        }
+        return cell
     }
 
-    func dequeue<T: UITableViewHeaderFooterView>(_ classType: T.Type) -> T? {
-        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: T.self)) as? T
+    func dequeue<T: UITableViewHeaderFooterView>(_ classType: T.Type) -> T {
+        guard let cell = dequeueReusableHeaderFooterView(withIdentifier: String(describing: T.self)) as? T else {
+            fatalError("\(T.self) is not registered")
+        }
+        return cell
     }
 }
