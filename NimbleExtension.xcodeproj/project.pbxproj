@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2C2BBC9049DDDB4214D62424 /* Pods_NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */; };
+		49BAA01C2315313500C7D156 /* JSONAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA00E2315313400C7D156 /* JSONAPIError.swift */; };
+		49BAA01D2315313500C7D156 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA00F2315313400C7D156 /* Links.swift */; };
+		49BAA01E2315313500C7D156 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0102315313400C7D156 /* DataType.swift */; };
+		49BAA01F2315313500C7D156 /* JSONAPIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0112315313400C7D156 /* JSONAPIObject.swift */; };
+		49BAA0202315313500C7D156 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0122315313400C7D156 /* Link.swift */; };
+		49BAA0212315313500C7D156 /* JSONAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0132315313400C7D156 /* JSONAPIType.swift */; };
+		49BAA0222315313500C7D156 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0142315313400C7D156 /* JSON.swift */; };
+		49BAA0232315313500C7D156 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0152315313400C7D156 /* Resource.swift */; };
+		49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0162315313400C7D156 /* ResourceIdentifier.swift */; };
+		49BAA0252315313500C7D156 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0172315313400C7D156 /* Relationship.swift */; };
+		49BAA0262315313500C7D156 /* JSONAPIDecoding+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0182315313400C7D156 /* JSONAPIDecoding+LocalizedError.swift */; };
+		49BAA0272315313500C7D156 /* Optional+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA01A2315313400C7D156 /* Optional+Extras.swift */; };
+		49BAA0282315313500C7D156 /* JSONAPIDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA01B2315313400C7D156 /* JSONAPIDecoder.swift */; };
 		900F6B74230CE48F0018D22C /* NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900F6B6A230CE48F0018D22C /* NimbleExtension.framework */; };
 		900F6B7B230CE48F0018D22C /* NimbleExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 900F6B6D230CE48F0018D22C /* NimbleExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */; };
@@ -34,6 +47,19 @@
 /* Begin PBXFileReference section */
 		0132CA7E973D873142CB5903 /* Pods-NimbleExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.release.xcconfig"; sourceTree = "<group>"; };
 		30F97E2328DE5DE9B1A2D65C /* Pods-NimbleExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
+		49BAA00E2315313400C7D156 /* JSONAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIError.swift; sourceTree = "<group>"; };
+		49BAA00F2315313400C7D156 /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		49BAA0102315313400C7D156 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		49BAA0112315313400C7D156 /* JSONAPIObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIObject.swift; sourceTree = "<group>"; };
+		49BAA0122315313400C7D156 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		49BAA0132315313400C7D156 /* JSONAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIType.swift; sourceTree = "<group>"; };
+		49BAA0142315313400C7D156 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		49BAA0152315313400C7D156 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		49BAA0162315313400C7D156 /* ResourceIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceIdentifier.swift; sourceTree = "<group>"; };
+		49BAA0172315313400C7D156 /* Relationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		49BAA0182315313400C7D156 /* JSONAPIDecoding+LocalizedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONAPIDecoding+LocalizedError.swift"; sourceTree = "<group>"; };
+		49BAA01A2315313400C7D156 /* Optional+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extras.swift"; sourceTree = "<group>"; };
+		49BAA01B2315313400C7D156 /* JSONAPIDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIDecoder.swift; sourceTree = "<group>"; };
 		64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtensionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900F6B6A230CE48F0018D22C /* NimbleExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimbleExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900F6B6D230CE48F0018D22C /* NimbleExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimbleExtension.h; sourceTree = "<group>"; };
@@ -74,6 +100,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49BAA00C2315313400C7D156 /* JSONMapper */ = {
+			isa = PBXGroup;
+			children = (
+				49BAA00D2315313400C7D156 /* Models */,
+				49BAA0192315313400C7D156 /* Extensions */,
+				49BAA01B2315313400C7D156 /* JSONAPIDecoder.swift */,
+			);
+			path = JSONMapper;
+			sourceTree = "<group>";
+		};
+		49BAA00D2315313400C7D156 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49BAA00E2315313400C7D156 /* JSONAPIError.swift */,
+				49BAA00F2315313400C7D156 /* Links.swift */,
+				49BAA0102315313400C7D156 /* DataType.swift */,
+				49BAA0112315313400C7D156 /* JSONAPIObject.swift */,
+				49BAA0122315313400C7D156 /* Link.swift */,
+				49BAA0132315313400C7D156 /* JSONAPIType.swift */,
+				49BAA0142315313400C7D156 /* JSON.swift */,
+				49BAA0152315313400C7D156 /* Resource.swift */,
+				49BAA0162315313400C7D156 /* ResourceIdentifier.swift */,
+				49BAA0172315313400C7D156 /* Relationship.swift */,
+				49BAA0182315313400C7D156 /* JSONAPIDecoding+LocalizedError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49BAA0192315313400C7D156 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49BAA01A2315313400C7D156 /* Optional+Extras.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		900F6B60230CE48F0018D22C = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +178,10 @@
 		900F6B84230CE4DB0018D22C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				49BAA00C2315313400C7D156 /* JSONMapper */,
+				900F6B87230CE5110018D22C /* Views */,
 				900F6B86230CE5000018D22C /* Extensions */,
 				9E093CB0231393F0005B2460 /* TypeAlias */,
-				900F6B87230CE5110018D22C /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -392,10 +455,23 @@
 			files = (
 				9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */,
 				9E093CB22313940D005B2460 /* Callback.swift in Sources */,
+				49BAA0212315313500C7D156 /* JSONAPIType.swift in Sources */,
+				49BAA0282315313500C7D156 /* JSONAPIDecoder.swift in Sources */,
+				49BAA0222315313500C7D156 /* JSON.swift in Sources */,
+				49BAA01C2315313500C7D156 /* JSONAPIError.swift in Sources */,
+				49BAA01F2315313500C7D156 /* JSONAPIObject.swift in Sources */,
+				49BAA01D2315313500C7D156 /* Links.swift in Sources */,
 				900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */,
+				49BAA0262315313500C7D156 /* JSONAPIDecoding+LocalizedError.swift in Sources */,
+				49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */,
 				900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */,
 				900F6B8F230CE5E20018D22C /* Bundle+Version.swift in Sources */,
+				49BAA0252315313500C7D156 /* Relationship.swift in Sources */,
+				49BAA0202315313500C7D156 /* Link.swift in Sources */,
+				49BAA0232315313500C7D156 /* Resource.swift in Sources */,
 				900F6B8C230CE54E0018D22C /* UITableView+DequeueReusable.swift in Sources */,
+				49BAA0272315313500C7D156 /* Optional+Extras.swift in Sources */,
+				49BAA01E2315313500C7D156 /* DataType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
