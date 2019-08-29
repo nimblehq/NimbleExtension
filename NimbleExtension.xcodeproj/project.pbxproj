@@ -32,6 +32,7 @@
 		9D88926164156FD8AEEC4081 /* Pods_NimbleExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */; };
 		9E093CB22313940D005B2460 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB12313940D005B2460 /* Callback.swift */; };
 		9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB323139453005B2460 /* CompletionHandler.swift */; };
+		EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		9E093CB12313940D005B2460 /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
 		9E093CB323139453005B2460 /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Initializing.swift"; sourceTree = "<group>"; };
 		F47CCAA68AED19C601B6A91A /* Pods-NimbleExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		FD7DF5E140F8D33491D6EAD6 /* Pods-NimbleExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 			children = (
 				900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */,
 				900F6B8B230CE54E0018D22C /* UITableView+DequeueReusable.swift */,
+				EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */,
+				EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */,
 				9E093CB22313940D005B2460 /* Callback.swift in Sources */,
 				49BAA0212315313500C7D156 /* JSONAPIType.swift in Sources */,
 				49BAA0282315313500C7D156 /* JSONAPIDecoder.swift in Sources */,
