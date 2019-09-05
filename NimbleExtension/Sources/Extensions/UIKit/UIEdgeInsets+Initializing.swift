@@ -9,25 +9,6 @@ import UIKit
 
 public extension UIEdgeInsets {
 
-    // MARK: - edges
-
-    static func all(_ value: CGFloat) -> UIEdgeInsets {
-        return UIEdgeInsets(top: value, left: value, bottom: value, right: value)
-    }
-
-    static func edges(top: CGFloat = 0.0, left: CGFloat = 0.0, bottom: CGFloat = 0.0, right: CGFloat = 0.0) -> UIEdgeInsets {
-        return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
-    }
-
-    static func each(vertical: CGFloat, horizontal: CGFloat) -> UIEdgeInsets {
-        return UIEdgeInsets(
-            top: vertical,
-            left: horizontal,
-            bottom: vertical,
-            right: horizontal
-        )
-    }
-
     // MARK: - by axis
 
     var vertical: CGFloat { return top + bottom }
@@ -62,6 +43,22 @@ public extension UIEdgeInsets {
         return UIEdgeInsets.zero.right(value)
     }
 
+    static func all(_ value: CGFloat) -> UIEdgeInsets {
+        return UIEdgeInsets(top: value, left: value, bottom: value, right: value)
+    }
+
+    static func edges(top: CGFloat = 0.0, left: CGFloat = 0.0, bottom: CGFloat = 0.0, right: CGFloat = 0.0) -> UIEdgeInsets {
+        return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+    }
+
+    static func each(vertical: CGFloat, horizontal: CGFloat) -> UIEdgeInsets {
+        return UIEdgeInsets(
+            top: vertical,
+            left: horizontal,
+            bottom: vertical,
+            right: horizontal
+        )
+    }
 }
 
 // MARK: - builder
