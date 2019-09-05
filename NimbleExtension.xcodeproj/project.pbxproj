@@ -35,6 +35,7 @@
 		EC2209B0231781EB00F49979 /* UICollectionView+RegisterReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */; };
 		EC2209B22317853F00F49979 /* UICollectionView+DequeueReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */; };
 		EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */; };
+		EC4EEB1D2320BB9D008F97DB /* UIView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EEB1C2320BB9D008F97DB /* UIView+RoundedCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterReusable.swift"; sourceTree = "<group>"; };
 		EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueReusable.swift"; sourceTree = "<group>"; };
 		EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Initializing.swift"; sourceTree = "<group>"; };
+		EC4EEB1C2320BB9D008F97DB /* UIView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorners.swift"; sourceTree = "<group>"; };
 		F47CCAA68AED19C601B6A91A /* Pods-NimbleExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		FD7DF5E140F8D33491D6EAD6 /* Pods-NimbleExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +228,7 @@
 				EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */,
 				EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */,
 				EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */,
+				EC4EEB1C2320BB9D008F97DB /* UIView+RoundedCorners.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				EC2209B0231781EB00F49979 /* UICollectionView+RegisterReusable.swift in Sources */,
 				49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */,
 				900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */,
+				EC4EEB1D2320BB9D008F97DB /* UIView+RoundedCorners.swift in Sources */,
 				900F6B8F230CE5E20018D22C /* Bundle+Version.swift in Sources */,
 				49BAA0252315313500C7D156 /* Relationship.swift in Sources */,
 				49BAA0202315313500C7D156 /* Link.swift in Sources */,
