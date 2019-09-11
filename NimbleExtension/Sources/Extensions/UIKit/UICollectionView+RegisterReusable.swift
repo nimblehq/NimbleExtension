@@ -27,7 +27,26 @@ import UIKit
 
 public extension UICollectionView {
 
+    enum SectionKind {
+        case header
+        case footer
+
+        var stringValue: String {
+            switch self {
+            case .header:
+                return UICollectionView.elementKindSectionHeader
+            case .footer:
+                return UICollectionView.elementKindSectionFooter
+            }
+        }
+    }
+
     func register<T: UICollectionViewCell>(_ classType: T.Type) {
         register(classType, forCellWithReuseIdentifier: String(describing: T.self))
+    }
+
+    func register<T: UICollectionReusableView>(_ classType: T.Type, sectionKind: SectionKind) {
+        let reuseIdentifier = String(describing: T.self)
+        register(classType, forSupplementaryViewOfKind: sectionKind.stringValue, withReuseIdentifier: reuseIdentifier)
     }
 }

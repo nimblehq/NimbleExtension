@@ -34,4 +34,15 @@ public extension UICollectionView {
         }
         return cell
     }
+
+    func dequeue<T: UICollectionReusableView>(_ classType: T.Type, ofKind kind: String, for indexPath: IndexPath) -> T {
+        let reuseIdentifier = String(describing: T.self)
+        guard let view = dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: reuseIdentifier,
+            for: indexPath) as? T else {
+                fatalError("\(T.self) is not registered")
+        }
+        return view
+    }
 }
