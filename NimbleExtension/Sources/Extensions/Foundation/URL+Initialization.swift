@@ -9,8 +9,8 @@
 import Foundation
 
 public extension URL {
-    init?(string: String?) {
-        guard let str = string else { return nil }
+    init?(str: String?) {
+        guard let str = str else { return nil }
         self.init(string: str)
     }
 }
