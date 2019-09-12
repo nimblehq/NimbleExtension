@@ -29,6 +29,7 @@
 		900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B90230CE60B0018D22C /* FullyRoundedButton.swift */; };
 		900F6B95230CE6960018D22C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B94230CE6960018D22C /* .gitkeep */; };
 		900F6B97230CE6AA0018D22C /* NimbleExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B96230CE6A90018D22C /* NimbleExtension.podspec */; };
+		90A45C84232A616000DCD6C7 /* URL+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A45C83232A616000DCD6C7 /* URL+Initialization.swift */; };
 		9D88926164156FD8AEEC4081 /* Pods_NimbleExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */; };
 		9E093CB22313940D005B2460 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB12313940D005B2460 /* Callback.swift */; };
 		9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB323139453005B2460 /* CompletionHandler.swift */; };
@@ -76,6 +77,7 @@
 		900F6B90230CE60B0018D22C /* FullyRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullyRoundedButton.swift; sourceTree = "<group>"; };
 		900F6B94230CE6960018D22C /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		900F6B96230CE6A90018D22C /* NimbleExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NimbleExtension.podspec; sourceTree = "<group>"; };
+		90A45C83232A616000DCD6C7 /* URL+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Initialization.swift"; sourceTree = "<group>"; };
 		9E093CB12313940D005B2460 /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
 		9E093CB323139453005B2460 /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				900F6B8E230CE5E20018D22C /* Bundle+Version.swift */,
+				90A45C83232A616000DCD6C7 /* URL+Initialization.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				900F6B8C230CE54E0018D22C /* UITableView+DequeueReusable.swift in Sources */,
 				49BAA0272315313500C7D156 /* Optional+Extras.swift in Sources */,
 				49BAA01E2315313500C7D156 /* DataType.swift in Sources */,
+				90A45C84232A616000DCD6C7 /* URL+Initialization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
