@@ -6,37 +6,37 @@
 
 import Foundation
 
-enum JSONAPIResponseType {
+public enum JSONAPIResponseType {
 
     case data(DataType<Resource>)
     case errors([JSONAPIError])
     case meta(JSON)
 }
 
-struct JSONAPIObject: Decodable {
+public struct JSONAPIObject: Decodable {
     //todo:- data, errors, meta - (either data or errors)
     //       jsonapi, links, included (optional)
     enum CodingKeys: String, CodingKey {
         case data, links, included, errors, meta
     }
     
-    let type: JSONAPIResponseType
+    public let type: JSONAPIResponseType
 
-    let links: Links?
-    let included: [Resource]?
-    let meta: JSON?
+    public let links: Links?
+    public let included: [Resource]?
+    public let meta: JSON?
 
-    var data: DataType<Resource>? {
+    public var data: DataType<Resource>? {
         if case .data(let data) = type { return data }
         return nil
     }
 
-    var errors: [JSONAPIError]? {
+    public var errors: [JSONAPIError]? {
         if case .errors(let errors) = type { return errors }
         return nil
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         let data = try container.decodeIfPresent(DataType<Resource>.self, forKey: .data)

@@ -6,22 +6,21 @@
 
 import Foundation
 
-struct JSONAPIError: Error, Decodable, Equatable {
+public struct JSONAPIError: Error, Decodable, Equatable {
 
-    struct Source: Decodable, Equatable {
+    public struct Source: Decodable, Equatable {
         let parameter: String?
     }
     
-    let id: String?
-    let title: String?
-    let detail: String?
-    let source: Source?
+    public let id: String?
+    public let title: String?
+    public let detail: String?
+    public let source: Source?
     /// http status code of the error
-    let status: String?
+    public let status: String?
     /// application-specific error code
-    let code: String?
+    public let code: String?
 }
 
 //note:- JSON:API error object is sent as an array of errors.
-
 extension Array: Error where Element == JSONAPIError {}

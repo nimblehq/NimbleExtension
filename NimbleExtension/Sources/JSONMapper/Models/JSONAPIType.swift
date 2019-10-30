@@ -6,7 +6,7 @@
 
 typealias JSONAPICodable = JSONAPIType & Codable
 
-protocol JSONAPIType {
+public protocol JSONAPIType {
 
     var id: String { get }
     var type: String { get }

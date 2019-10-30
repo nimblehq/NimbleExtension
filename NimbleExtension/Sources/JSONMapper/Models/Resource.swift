@@ -6,21 +6,21 @@
 
 import Foundation
 
-struct Resource: JSONAPICodable {
+public struct Resource: JSONAPICodable {
     
     enum CodingKeys: String, CodingKey {
         case id, type, attributes, relationships, links, meta
     }
 
-    let id: String
-    let type: String
+    public let id: String
+    public let type: String
 
-    let attributes: JSON?
-    let relationships: [String: Relationship]?
-    let links: Links?
-    let meta: JSON?
+    public let attributes: JSON?
+    public let relationships: [String: Relationship]?
+    public let links: Links?
+    public let meta: JSON?
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
         type = try container.decode(String.self, forKey: .type)

@@ -5,7 +5,7 @@
 //
 // swiftlint:disable multiline_function_chains
 
-enum JSON: Codable {
+public enum JSON: Codable {
 
     case string(String)
     case int(Int)
@@ -15,38 +15,38 @@ enum JSON: Codable {
     case array([JSON])
     case `nil`
     
-    var string: String? {
+    public var string: String? {
         guard case .string(let value) = self else { return nil }
         return value
     }
     
-    var int: Int? {
+    public var int: Int? {
         guard case .int(let value) = self else { return nil }
         return value
     }
     
     // swiftlint:disable:next discouraged_optional_boolean
-    var bool: Bool? {
+    public var bool: Bool? {
         guard case .bool(let value) = self else { return nil }
         return value
     }
     
-    var double: Double? {
+    public var double: Double? {
         guard case .double(let value) = self else { return nil }
         return value
     }
     
-    var nested: [String: JSON]? {
+    public var nested: [String: JSON]? {
         guard case .nested(let value) = self else { return nil }
         return value
     }
     
-    var array: [JSON]? {
+    public var array: [JSON]? {
         guard case .array(let value) = self else { return nil }
         return value
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         self = try container.decodeIfPresent(String.self).map(JSON.string)
             .or(container.decodeIfPresent(Int.self).map(JSON.int))
@@ -64,7 +64,7 @@ enum JSON: Codable {
         return DecodingError.typeMismatch(JSON.self, context)
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
         case .string(let string):   try container.encode(string)
@@ -77,7 +77,7 @@ enum JSON: Codable {
         }
     }
     
-    subscript(key: String) -> JSON? {
+    public subscript(key: String) -> JSON? {
         get { return nested?[key] }
         set {
             if case .nested(var dictionary) = self {

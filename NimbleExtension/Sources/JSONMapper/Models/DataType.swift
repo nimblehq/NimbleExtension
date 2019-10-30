@@ -6,12 +6,12 @@
 
 import Foundation
 
-enum DataType<T: Codable>: Codable {
+public enum DataType<T: Codable>: Codable {
 
     case single(T)
     case collection([T])
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         do {
             self = try .single(container.decode(T.self))
@@ -20,7 +20,7 @@ enum DataType<T: Codable>: Codable {
         }
     }
 
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
         case .single(let object):
