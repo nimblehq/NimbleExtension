@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct Relationship: Codable {
+public struct Relationship: Codable {
     
     enum CodingKeys: String, CodingKey {
         case links, data, meta
     }
     
-    let links: Links?
-    let data: DataType<ResourceIdentifier>?
-    let meta: JSON?
+    public let links: Links?
+    public let data: DataType<ResourceIdentifier>?
+    public let meta: JSON?
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         links = try container.decodeIfPresent(Links.self, forKey: .links)
         data = try container.decodeIfPresent(DataType<ResourceIdentifier>.self, forKey: .data)

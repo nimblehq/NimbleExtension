@@ -4,8 +4,8 @@
 //  Copyright © 2018 Nimble. All rights reserved.
 //
 
-enum Errors: Error {
-    enum JSONAPIDecodingError: LocalizedError {
+public enum Errors: Error {
+    public enum JSONAPIDecodingError: LocalizedError {
         case resourceNotFound(identifier: ResourceIdentifier)
         case invalidFormat(reason: String)
         case unableToDecode(reason: String)

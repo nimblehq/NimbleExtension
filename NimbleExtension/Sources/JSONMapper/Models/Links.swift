@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct Links: Codable {
+public struct Links: Codable {
     
     enum CodingKeys: String, CodingKey {
         case selfURL = "self"
@@ -14,7 +14,7 @@ struct Links: Codable {
         case articleURL = "article"
     }
 
-    let selfURL: Link?
-    let relatedURL: Link?
-    let articleURL: Link?
+    public let selfURL: Link?
+    public let relatedURL: Link?
+    public let articleURL: Link?
 }
