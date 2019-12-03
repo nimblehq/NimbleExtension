@@ -8,7 +8,6 @@ import Foundation
 
 public class JSONAPIDecoder: JSONDecoder {
     
-    // MARK: - private helpers
     private typealias ResourceDictionary = [ResourceIdentifier: Resource]
 
     public override func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
@@ -26,6 +25,12 @@ public class JSONAPIDecoder: JSONDecoder {
             throw errors
         }
     }
+    
+}
+
+// MARK: - Private
+    
+extension JSONAPIDecoder {
     
     private func decode<T: Decodable>(_ meta: JSON, into type: T.Type) throws -> T {
         let data = try JSONEncoder().encode(meta)
