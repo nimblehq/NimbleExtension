@@ -191,7 +191,7 @@
 				49BAA00C2315313400C7D156 /* JSONMapper */,
 				900F6B87230CE5110018D22C /* Views */,
 				900F6B86230CE5000018D22C /* Extensions */,
-				9E093CB0231393F0005B2460 /* TypeAlias */,
+				9E093CB0231393F0005B2460 /* Typealiases */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -260,13 +260,13 @@
 			path = SourcesTests;
 			sourceTree = "<group>";
 		};
-		9E093CB0231393F0005B2460 /* TypeAlias */ = {
+		9E093CB0231393F0005B2460 /* Typealiases */ = {
 			isa = PBXGroup;
 			children = (
 				9E093CB12313940D005B2460 /* Callback.swift */,
 				9E093CB323139453005B2460 /* CompletionHandler.swift */,
 			);
-			path = TypeAlias;
+			path = Typealiases;
 			sourceTree = "<group>";
 		};
 		BDDFBCA3758B732C3B82DED2 /* Pods */ = {

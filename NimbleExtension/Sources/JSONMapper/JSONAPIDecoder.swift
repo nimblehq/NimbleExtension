@@ -8,7 +8,6 @@ import Foundation
 
 public class JSONAPIDecoder: JSONDecoder {
     
-    // MARK: - private helpers
     private typealias ResourceDictionary = [ResourceIdentifier: Resource]
 
     public override func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
@@ -26,6 +25,37 @@ public class JSONAPIDecoder: JSONDecoder {
             throw errors
         }
     }
+    
+    public func decodeWithMeta<Value: Decodable, Meta: Decodable>(
+        value valueType: Value.Type,
+        meta metaType: Meta.Type,
+        from data: Data
+    ) throws -> (value: Value, meta: Meta) {
+        let jsonAPIObject = try super.decode(JSONAPIObject.self, from: data)
+        
+        let includedData = jsonAPIObject.included ?? []
+        let dictionary = includedDictionary(from: includedData)
+        
+        switch jsonAPIObject.type {
+        case .data(let data):
+            return (
+                value: try decode(data, including: dictionary, into: valueType),
+                meta: try decode(jsonAPIObject.meta ?? .nil, into: metaType)
+            )
+        case .meta(let meta):
+            throw Errors.JSONAPIDecodingError.unableToDecode(
+                reason: "No data field. Only contains meta: \(meta)"
+            )
+        case .errors(let errors):
+            throw errors
+        }
+    }
+    
+}
+
+// MARK: - Private
+    
+extension JSONAPIDecoder {
     
     private func decode<T: Decodable>(_ meta: JSON, into type: T.Type) throws -> T {
         let data = try JSONEncoder().encode(meta)
