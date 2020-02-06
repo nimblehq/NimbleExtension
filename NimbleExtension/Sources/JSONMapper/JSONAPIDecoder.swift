@@ -99,9 +99,7 @@ extension JSONAPIDecoder {
     
     private func resolvedAttributes(of resource: Resource,
                                     including includedDictionary: ResourceDictionary) throws -> JSON? {
-        guard var attributes = resource.attributes?.nested else {
-            throw Errors.JSONAPIDecodingError.unableToDecode(reason: "Empty optional")
-        }
+        var attributes = resource.attributes?.nested ?? [:]
         attributes[Resource.CodingKeys.id.rawValue] = .string(resource.id)
         attributes[Resource.CodingKeys.type.rawValue] = .string(resource.type)
 
