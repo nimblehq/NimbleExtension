@@ -30,9 +30,9 @@
 		900F6B95230CE6960018D22C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B94230CE6960018D22C /* .gitkeep */; };
 		900F6B97230CE6AA0018D22C /* NimbleExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B96230CE6A90018D22C /* NimbleExtension.podspec */; };
 		90A45C84232A616000DCD6C7 /* URL+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A45C83232A616000DCD6C7 /* URL+Initialization.swift */; };
+		90FF591C2509D8C70071A286 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF591B2509D8C70071A286 /* Typealias.swift */; };
+		90FF591F2509D96C0071A286 /* EmptyRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF591E2509D96C0071A286 /* EmptyRequestResult.swift */; };
 		9D88926164156FD8AEEC4081 /* Pods_NimbleExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A44437D89D07FD927FE67A /* Pods_NimbleExtensionTests.framework */; };
-		9E093CB22313940D005B2460 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB12313940D005B2460 /* Callback.swift */; };
-		9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB323139453005B2460 /* CompletionHandler.swift */; };
 		EC2209B0231781EB00F49979 /* UICollectionView+RegisterReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */; };
 		EC2209B22317853F00F49979 /* UICollectionView+DequeueReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */; };
 		EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */; };
@@ -78,8 +78,8 @@
 		900F6B94230CE6960018D22C /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		900F6B96230CE6A90018D22C /* NimbleExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NimbleExtension.podspec; sourceTree = "<group>"; };
 		90A45C83232A616000DCD6C7 /* URL+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Initialization.swift"; sourceTree = "<group>"; };
-		9E093CB12313940D005B2460 /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
-		9E093CB323139453005B2460 /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
+		90FF591B2509D8C70071A286 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		90FF591E2509D96C0071A286 /* EmptyRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequestResult.swift; sourceTree = "<group>"; };
 		ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterReusable.swift"; sourceTree = "<group>"; };
 		EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueReusable.swift"; sourceTree = "<group>"; };
@@ -188,10 +188,11 @@
 		900F6B84230CE4DB0018D22C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				49BAA00C2315313400C7D156 /* JSONMapper */,
-				900F6B87230CE5110018D22C /* Views */,
+				90FF591D2509D9550071A286 /* Constants */,
 				900F6B86230CE5000018D22C /* Extensions */,
+				49BAA00C2315313400C7D156 /* JSONMapper */,
 				9E093CB0231393F0005B2460 /* Typealiases */,
+				900F6B87230CE5110018D22C /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -260,11 +261,18 @@
 			path = SourcesTests;
 			sourceTree = "<group>";
 		};
+		90FF591D2509D9550071A286 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				90FF591E2509D96C0071A286 /* EmptyRequestResult.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		9E093CB0231393F0005B2460 /* Typealiases */ = {
 			isa = PBXGroup;
 			children = (
-				9E093CB12313940D005B2460 /* Callback.swift */,
-				9E093CB323139453005B2460 /* CompletionHandler.swift */,
+				90FF591B2509D8C70071A286 /* Typealias.swift */,
 			);
 			path = Typealiases;
 			sourceTree = "<group>";
@@ -468,10 +476,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */,
 				EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */,
-				9E093CB22313940D005B2460 /* Callback.swift in Sources */,
 				49BAA0212315313500C7D156 /* JSONAPIType.swift in Sources */,
+				90FF591F2509D96C0071A286 /* EmptyRequestResult.swift in Sources */,
 				49BAA0282315313500C7D156 /* JSONAPIDecoder.swift in Sources */,
 				EC2209B22317853F00F49979 /* UICollectionView+DequeueReusable.swift in Sources */,
 				49BAA0222315313500C7D156 /* JSON.swift in Sources */,
@@ -480,6 +487,7 @@
 				49BAA01D2315313500C7D156 /* Links.swift in Sources */,
 				900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */,
 				49BAA0262315313500C7D156 /* JSONAPIDecodingError.swift in Sources */,
+				90FF591C2509D8C70071A286 /* Typealias.swift in Sources */,
 				EC2209B0231781EB00F49979 /* UICollectionView+RegisterReusable.swift in Sources */,
 				49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */,
 				900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */,
@@ -648,6 +656,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/NimbleExtension/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -675,6 +684,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/NimbleExtension/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
