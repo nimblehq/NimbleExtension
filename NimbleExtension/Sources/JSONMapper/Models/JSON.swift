@@ -78,7 +78,7 @@ public enum JSON: Codable {
     }
     
     public subscript(key: String) -> JSON? {
-        get { return nested?[key] }
+        get { nested?[key] }
         set {
             if case .nested(var dictionary) = self {
                 dictionary[key] = newValue
@@ -89,7 +89,5 @@ public enum JSON: Codable {
 }
 
 private extension SingleValueDecodingContainer {
-    func decodeIfPresent<T: Decodable>(_ type: T.Type) -> T? {
-        return try? decode(type)
-    }
+    func decodeIfPresent<T: Decodable>(_ type: T.Type) -> T? { try? decode(type) }
 }

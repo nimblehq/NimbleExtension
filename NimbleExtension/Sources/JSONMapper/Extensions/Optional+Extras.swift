@@ -6,11 +6,9 @@
 
 public extension Optional {
     
-    var isNil: Bool {
-        return self == nil
-    }
+    var isNil: Bool { self == nil }
     
-    var hasValue: Bool { return !isNil }
+    var hasValue: Bool { !isNil }
 
     func or(_ otherOptional: @autoclosure () throws -> Wrapped?) rethrows -> Wrapped? {
         switch self {

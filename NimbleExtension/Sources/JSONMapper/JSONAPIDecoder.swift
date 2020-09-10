@@ -91,7 +91,7 @@ extension JSONAPIDecoder {
     }
 
     private func includedDictionary(from includedData: [Resource]) -> ResourceDictionary {
-        return includedData.reduce(into: [:]) { dictionary, resource in
+        includedData.reduce(into: [:]) { dictionary, resource in
             let identifier = ResourceIdentifier(id: resource.id, type: resource.type)
             dictionary[identifier] = resource
         }

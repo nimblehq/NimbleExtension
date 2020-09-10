@@ -27,10 +27,10 @@ import Foundation
 
 public extension Bundle {
     var shortVersion: String? {
-        return object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
     }
 
     var buildVersion: String? {
-        return object(forInfoDictionaryKey: "CFBundleVersion") as? String
+        object(forInfoDictionaryKey: "CFBundleVersion") as? String
     }
 }

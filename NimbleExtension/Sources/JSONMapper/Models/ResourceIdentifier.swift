@@ -20,7 +20,5 @@ public struct ResourceIdentifier: JSONAPICodable, Hashable {
 //       to be as a parameter of JSON:API request.
 
 public extension ResourceIdentifiable {
-    var resourceIdentifier: ResourceIdentifier {
-        return ResourceIdentifier(id: id, type: type)
-    }
+    var resourceIdentifier: ResourceIdentifier { ResourceIdentifier(id: id, type: type) }
 }
