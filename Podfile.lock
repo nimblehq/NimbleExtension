@@ -1,16 +1,23 @@
 PODS:
+  - NimbleExtension (0.1.0)
   - SwiftLint (0.34.0)
 
 DEPENDENCIES:
+  - NimbleExtension (from `./`)
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - SwiftLint
 
+EXTERNAL SOURCES:
+  NimbleExtension:
+    :path: "./"
+
 SPEC CHECKSUMS:
+  NimbleExtension: acad4290f27afd4241b1ea20f8597889085e2ce7
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 64c35c3e8aa87b03ed5f22b986bdc72d9363b792
+PODFILE CHECKSUM: a7eb9e80cdf4cf43720c0fa4b5666342ad13ea65
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1
