@@ -14,3 +14,7 @@ target 'NimbleExtension' do
   end
 
 end
+
+target 'Example' do
+  pod 'NimbleExtension', :path => './'
+end

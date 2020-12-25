@@ -12,7 +12,7 @@ open class AppDelegateWithBootstrap: UIResponder, UIApplicationDelegate {
     fileprivate let bootstrap: Bootstrap
     
     open var window: UIWindow?
-    open var plugins: [PluginRegisterable.Type] = []
+    open var plugins: [PluginRegisterable.Type] { [] }
     
     public override init() {
         bootstrap = Bootstrap()
