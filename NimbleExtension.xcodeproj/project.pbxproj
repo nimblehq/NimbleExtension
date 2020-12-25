@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C2BBC9049DDDB4214D62424 /* Pods_NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */; };
+		2D6AA9AE259324AB00052CDD /* Bootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6AA9AD259324AB00052CDD /* Bootstrap.swift */; };
+		2D6AA9B4259326FC00052CDD /* PluginRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6AA9B3259326FC00052CDD /* PluginRegisterable.swift */; };
+		2D6AA9B82593273900052CDD /* AppDelegateWithBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6AA9B72593273900052CDD /* AppDelegateWithBootstrap.swift */; };
 		49BAA01C2315313500C7D156 /* JSONAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA00E2315313400C7D156 /* JSONAPIError.swift */; };
 		49BAA01D2315313500C7D156 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA00F2315313400C7D156 /* Links.swift */; };
 		49BAA01E2315313500C7D156 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA0102315313400C7D156 /* DataType.swift */; };
@@ -52,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		0132CA7E973D873142CB5903 /* Pods-NimbleExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.release.xcconfig"; sourceTree = "<group>"; };
+		2D6AA9AD259324AB00052CDD /* Bootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrap.swift; sourceTree = "<group>"; };
+		2D6AA9B3259326FC00052CDD /* PluginRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginRegisterable.swift; sourceTree = "<group>"; };
+		2D6AA9B72593273900052CDD /* AppDelegateWithBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateWithBootstrap.swift; sourceTree = "<group>"; };
 		30F97E2328DE5DE9B1A2D65C /* Pods-NimbleExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
 		49BAA00E2315313400C7D156 /* JSONAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIError.swift; sourceTree = "<group>"; };
 		49BAA00F2315313400C7D156 /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
@@ -112,6 +118,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D6AA9AC2593249500052CDD /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				2D6AA9AD259324AB00052CDD /* Bootstrap.swift */,
+				2D6AA9B3259326FC00052CDD /* PluginRegisterable.swift */,
+				2D6AA9B72593273900052CDD /* AppDelegateWithBootstrap.swift */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
 		49BAA00C2315313400C7D156 /* JSONMapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +207,7 @@
 		900F6B84230CE4DB0018D22C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2D6AA9AC2593249500052CDD /* Bootstrap */,
 				49BAA00C2315313400C7D156 /* JSONMapper */,
 				900F6B87230CE5110018D22C /* Views */,
 				900F6B86230CE5000018D22C /* Extensions */,
@@ -482,6 +499,7 @@
 				49BAA01F2315313500C7D156 /* JSONAPIObject.swift in Sources */,
 				49BAA01D2315313500C7D156 /* Links.swift in Sources */,
 				900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */,
+				2D6AA9B82593273900052CDD /* AppDelegateWithBootstrap.swift in Sources */,
 				49BAA0262315313500C7D156 /* JSONAPIDecodingError.swift in Sources */,
 				EC2209B0231781EB00F49979 /* UICollectionView+RegisterReusable.swift in Sources */,
 				49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */,
@@ -491,7 +509,9 @@
 				49BAA0252315313500C7D156 /* Relationship.swift in Sources */,
 				C66F45912563BFA400579408 /* Encodable+Dictionary.swift in Sources */,
 				49BAA0202315313500C7D156 /* Link.swift in Sources */,
+				2D6AA9AE259324AB00052CDD /* Bootstrap.swift in Sources */,
 				49BAA0232315313500C7D156 /* Resource.swift in Sources */,
+				2D6AA9B4259326FC00052CDD /* PluginRegisterable.swift in Sources */,
 				900F6B8C230CE54E0018D22C /* UITableView+DequeueReusable.swift in Sources */,
 				49BAA0272315313500C7D156 /* Optional+Extras.swift in Sources */,
 				49BAA01E2315313500C7D156 /* DataType.swift in Sources */,
