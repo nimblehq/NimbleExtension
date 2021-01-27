@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Thread {
+public extension Thread {
 
     /**
         A better alternative for executing code on main thread
