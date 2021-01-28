@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241649A025C16305007EEAB5 /* Thread+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416499F25C16305007EEAB5 /* Thread+Async.swift */; };
 		2C2BBC9049DDDB4214D62424 /* Pods_NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */; };
 		49BAA01C2315313500C7D156 /* JSONAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA00E2315313400C7D156 /* JSONAPIError.swift */; };
 		49BAA01D2315313500C7D156 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA00F2315313400C7D156 /* Links.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		0132CA7E973D873142CB5903 /* Pods-NimbleExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.release.xcconfig"; sourceTree = "<group>"; };
+		2416499F25C16305007EEAB5 /* Thread+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Async.swift"; sourceTree = "<group>"; };
 		30F97E2328DE5DE9B1A2D65C /* Pods-NimbleExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
 		49BAA00E2315313400C7D156 /* JSONAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIError.swift; sourceTree = "<group>"; };
 		49BAA00F2315313400C7D156 /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				900F6B8E230CE5E20018D22C /* Bundle+Version.swift */,
 				90A45C83232A616000DCD6C7 /* URL+Initialization.swift */,
+				2416499F25C16305007EEAB5 /* Thread+Async.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */,
+				241649A025C16305007EEAB5 /* Thread+Async.swift in Sources */,
 				EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */,
 				9E093CB22313940D005B2460 /* Callback.swift in Sources */,
 				49BAA0212315313500C7D156 /* JSONAPIType.swift in Sources */,
