@@ -4,6 +4,8 @@
 //  Copyright © 2018 Nimble. All rights reserved.
 //
 
+import Foundation
+
 public enum Errors: Error {
     public enum JSONAPIDecodingError: LocalizedError {
         case resourceNotFound(identifier: ResourceIdentifier)
