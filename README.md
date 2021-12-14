@@ -4,8 +4,20 @@ Swifter Swift development.
 
 ## Usage
 
+### CocoaPods
+
 ```ruby
 pod 'NimbleExtension', :git => 'https://github.com/nimblehq/NimbleExtension', :branch => 'master'
+```
+
+### Swift Package Manager
+
+```ruby
+repositoryURL = "https://github.com/nimblehq/NimbleExtension.git";
+requirement = {
+    branch = master;
+    kind = branch;
+};
 ```
 
 ## License
