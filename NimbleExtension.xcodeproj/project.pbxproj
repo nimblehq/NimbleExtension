@@ -24,10 +24,7 @@
 		49BAA0282315313500C7D156 /* JSONAPIDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA01B2315313400C7D156 /* JSONAPIDecoder.swift */; };
 		900F6B74230CE48F0018D22C /* NimbleExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900F6B6A230CE48F0018D22C /* NimbleExtension.framework */; };
 		900F6B7B230CE48F0018D22C /* NimbleExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 900F6B6D230CE48F0018D22C /* NimbleExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */; };
-		900F6B8C230CE54E0018D22C /* UITableView+DequeueReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B8B230CE54E0018D22C /* UITableView+DequeueReusable.swift */; };
 		900F6B8F230CE5E20018D22C /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B8E230CE5E20018D22C /* Bundle+Version.swift */; };
-		900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F6B90230CE60B0018D22C /* FullyRoundedButton.swift */; };
 		900F6B95230CE6960018D22C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B94230CE6960018D22C /* .gitkeep */; };
 		900F6B97230CE6AA0018D22C /* NimbleExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 900F6B96230CE6A90018D22C /* NimbleExtension.podspec */; };
 		90A45C84232A616000DCD6C7 /* URL+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A45C83232A616000DCD6C7 /* URL+Initialization.swift */; };
@@ -35,10 +32,6 @@
 		9E093CB22313940D005B2460 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB12313940D005B2460 /* Callback.swift */; };
 		9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E093CB323139453005B2460 /* CompletionHandler.swift */; };
 		C66F45912563BFA400579408 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66F45902563BFA400579408 /* Encodable+Dictionary.swift */; };
-		EC2209B0231781EB00F49979 /* UICollectionView+RegisterReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */; };
-		EC2209B22317853F00F49979 /* UICollectionView+DequeueReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */; };
-		EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */; };
-		EC4EEB1D2320BB9D008F97DB /* UIView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EEB1C2320BB9D008F97DB /* UIView+RoundedCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +67,7 @@
 		900F6B6E230CE48F0018D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		900F6B73230CE48F0018D22C /* NimbleExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbleExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900F6B7A230CE48F0018D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterReusable.swift"; sourceTree = "<group>"; };
-		900F6B8B230CE54E0018D22C /* UITableView+DequeueReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DequeueReusable.swift"; sourceTree = "<group>"; };
 		900F6B8E230CE5E20018D22C /* Bundle+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Version.swift"; sourceTree = "<group>"; };
-		900F6B90230CE60B0018D22C /* FullyRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullyRoundedButton.swift; sourceTree = "<group>"; };
 		900F6B94230CE6960018D22C /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		900F6B96230CE6A90018D22C /* NimbleExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NimbleExtension.podspec; sourceTree = "<group>"; };
 		90A45C83232A616000DCD6C7 /* URL+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Initialization.swift"; sourceTree = "<group>"; };
@@ -85,10 +75,6 @@
 		9E093CB323139453005B2460 /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		ACBBC6CB3BF89013B8AB2C39 /* Pods_NimbleExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66F45902563BFA400579408 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
-		EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterReusable.swift"; sourceTree = "<group>"; };
-		EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueReusable.swift"; sourceTree = "<group>"; };
-		EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Initializing.swift"; sourceTree = "<group>"; };
-		EC4EEB1C2320BB9D008F97DB /* UIView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorners.swift"; sourceTree = "<group>"; };
 		F47CCAA68AED19C601B6A91A /* Pods-NimbleExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtension.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtension/Pods-NimbleExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		FD7DF5E140F8D33491D6EAD6 /* Pods-NimbleExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleExtensionTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleExtensionTests/Pods-NimbleExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				49BAA00C2315313400C7D156 /* JSONMapper */,
-				900F6B87230CE5110018D22C /* Views */,
 				900F6B86230CE5000018D22C /* Extensions */,
 				9E093CB0231393F0005B2460 /* Typealiases */,
 			);
@@ -214,30 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				900F6B8D230CE5D60018D22C /* Foundation */,
-				900F6B88230CE5230018D22C /* UIKit */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		900F6B87230CE5110018D22C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				900F6B90230CE60B0018D22C /* FullyRoundedButton.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		900F6B88230CE5230018D22C /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				900F6B89230CE5430018D22C /* UITableView+RegisterReusable.swift */,
-				900F6B8B230CE54E0018D22C /* UITableView+DequeueReusable.swift */,
-				EC2209AF231781EB00F49979 /* UICollectionView+RegisterReusable.swift */,
-				EC2209B12317853F00F49979 /* UICollectionView+DequeueReusable.swift */,
-				EC2209B323178B6E00F49979 /* UIEdgeInsets+Initializing.swift */,
-				EC4EEB1C2320BB9D008F97DB /* UIView+RoundedCorners.swift */,
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 		900F6B8D230CE5D60018D22C /* Foundation */ = {
@@ -476,27 +439,20 @@
 			files = (
 				9E093CB423139453005B2460 /* CompletionHandler.swift in Sources */,
 				241649A025C16305007EEAB5 /* Thread+Async.swift in Sources */,
-				EC2209B423178B6E00F49979 /* UIEdgeInsets+Initializing.swift in Sources */,
 				9E093CB22313940D005B2460 /* Callback.swift in Sources */,
 				49BAA0212315313500C7D156 /* JSONAPIType.swift in Sources */,
 				49BAA0282315313500C7D156 /* JSONAPIDecoder.swift in Sources */,
-				EC2209B22317853F00F49979 /* UICollectionView+DequeueReusable.swift in Sources */,
 				49BAA0222315313500C7D156 /* JSON.swift in Sources */,
 				49BAA01C2315313500C7D156 /* JSONAPIError.swift in Sources */,
 				49BAA01F2315313500C7D156 /* JSONAPIObject.swift in Sources */,
 				49BAA01D2315313500C7D156 /* Links.swift in Sources */,
-				900F6B91230CE60B0018D22C /* FullyRoundedButton.swift in Sources */,
 				49BAA0262315313500C7D156 /* JSONAPIDecodingError.swift in Sources */,
-				EC2209B0231781EB00F49979 /* UICollectionView+RegisterReusable.swift in Sources */,
 				49BAA0242315313500C7D156 /* ResourceIdentifier.swift in Sources */,
-				900F6B8A230CE5430018D22C /* UITableView+RegisterReusable.swift in Sources */,
-				EC4EEB1D2320BB9D008F97DB /* UIView+RoundedCorners.swift in Sources */,
 				900F6B8F230CE5E20018D22C /* Bundle+Version.swift in Sources */,
 				49BAA0252315313500C7D156 /* Relationship.swift in Sources */,
 				C66F45912563BFA400579408 /* Encodable+Dictionary.swift in Sources */,
 				49BAA0202315313500C7D156 /* Link.swift in Sources */,
 				49BAA0232315313500C7D156 /* Resource.swift in Sources */,
-				900F6B8C230CE54E0018D22C /* UITableView+DequeueReusable.swift in Sources */,
 				49BAA0272315313500C7D156 /* Optional+Extras.swift in Sources */,
 				49BAA01E2315313500C7D156 /* DataType.swift in Sources */,
 				90A45C84232A616000DCD6C7 /* URL+Initialization.swift in Sources */,
