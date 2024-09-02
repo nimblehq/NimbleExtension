@@ -27,14 +27,14 @@ import SwiftUI
 
 public struct PresentCoverTransparentView: UIViewRepresentable {
 
-    private let uiHostingViewCount: Int
+    private let maxUIHostingViewsToTraverse: Int
 
-    public init(uiHostingViewCount: Int = 2) {
-        self.uiHostingViewCount = uiHostingViewCount
+    public init(maxUIHostingViewsToTraverse: Int = 2) {
+        self.maxUIHostingViewsToTraverse = maxUIHostingViewsToTraverse
     }
 
     public func makeUIView(context: Context) -> UIView {
-        return PresentCoverTransparentBackgroundView(uiHostingViewCount: uiHostingViewCount)
+        return PresentCoverTransparentBackgroundView(maxUIHostingViewsToTraverse: maxUIHostingViewsToTraverse)
     }
 
     public func updateUIView(
@@ -46,10 +46,10 @@ public struct PresentCoverTransparentView: UIViewRepresentable {
 public class PresentCoverTransparentBackgroundView: UIView {
 
     private let uiHostingViewName = "_UIHostingView"
-    private let uiHostingViewCount: Int
+    private let maxUIHostingViewsToTraverse: Int
 
-    public init(uiHostingViewCount: Int) {
-        self.uiHostingViewCount = uiHostingViewCount
+    public init(maxUIHostingViewsToTraverse: Int) {
+        self.maxUIHostingViewsToTraverse = maxUIHostingViewsToTraverse
         super.init(frame: .zero)
     }
 
@@ -59,25 +59,25 @@ public class PresentCoverTransparentBackgroundView: UIView {
 
     override public func didMoveToWindow() {
         super.didMoveToWindow()
-        var superview = superview
-        var traversedUIHostingView = 0
-        while superview != nil && traversedUIHostingView < uiHostingViewCount {
-            if superview?.backgroundColor != .clear {
-                superview?.backgroundColor = .clear
-                superview?.isOpaque = true
+        var currentSuperview = superview
+        var traversedCount = 0
+        while let superview = currentSuperview, traversedCount < maxUIHostingViewsToTraverse {
+            if superview.backgroundColor != .clear {
+                superview.backgroundColor = .clear
+                superview.isOpaque = true
             }
             if String(describing: superview).contains(uiHostingViewName) {
-                traversedUIHostingView += 1
+                traversedCount += 1
             }
-            superview = superview?.superview
+            currentSuperview = superview?.superview
         }
     }
 }
 
 extension View {
 
-    public func presentCoverTransparentBackground(uiHostingViewCount: Int = 2) -> some View {
-        PresentCoverTransparentView(uiHostingViewCount: uiHostingViewCount)
+    public func presentCoverTransparentBackground(maxUIHostingViewsToTraverse: Int = 2) -> some View {
+        PresentCoverTransparentView(maxUIHostingViewsToTraverse: maxUIHostingViewsToTraverse)
             .ignoresSafeArea(.all, edges: [.top, .horizontal])
             .overlay { self }
     }
