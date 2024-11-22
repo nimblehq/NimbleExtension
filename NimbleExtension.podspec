@@ -7,5 +7,5 @@ Pod::Spec.new do |spec|
   spec.authors      = { 'Nimble' => 'dev@nimblehq.co' }
   spec.source       = { :git => 'https://github.com/nimblehq/NimbleExtension', :branch => 'master' }
   spec.source_files = 'NimbleExtension/Sources/**/*.swift'
-  spec.ios.deployment_target  = '13.0'
+  spec.ios.deployment_target  = '15.0'
 end

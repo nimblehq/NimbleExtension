@@ -69,7 +69,7 @@ public class PresentCoverTransparentBackgroundView: UIView {
             if String(describing: superview).contains(uiHostingViewName) {
                 traversedCount += 1
             }
-            currentSuperview = superview?.superview
+            currentSuperview = superview.superview
         }
     }
 }
