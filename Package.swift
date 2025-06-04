@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+//  swift-tools-version: 5.8
 //  Package.swift
 //  NimbleExtension
 //
@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "NimbleExtension",
     platforms: [
-        .macOS(.v10_10), .iOS(.v8), .tvOS(.v9), .watchOS(.v2)
+        .iOS(.v15), .macOS(.v11), .tvOS(.v12), .watchOS(.v4)
     ],
     products: [
         .library(name: "NimbleExtension", targets: ["NimbleExtension"])
